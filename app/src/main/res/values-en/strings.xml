@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_today_desc">Capture what you see, and know when a moment returns.</string>
+    <string name="widget_words_desc">A note you once left behind — not the photo, just the words.</string>
+    <string name="widget_today_name">Today</string>
+    <string name="widget_words_name">Words of that day</string>
+</resources>

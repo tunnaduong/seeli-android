@@ -197,8 +197,8 @@ fun CommentThreadSheet(momentID: String, ownerID: String, ownerName: String, not
                 val canSend = !sending && draft.isNotBlank()
                 Box(Modifier.size(42.dp).clip(CircleShape).background(Seeli.Green.copy(alpha = if (canSend) 1f else 0.4f))
                     .tap { if (canSend) send() }, contentAlignment = Alignment.Center) {
-                    if (sending) CircularProgressIndicator(color = Color.White, strokeWidth = 2.dp, modifier = Modifier.size(16.dp))
-                    else Icon(Icons.Outlined.ArrowUpward, t("comments.reply.send"), tint = Color.White, modifier = Modifier.size(18.dp))
+                    if (sending) CircularProgressIndicator(color = Seeli.OnGreen, strokeWidth = 2.dp, modifier = Modifier.size(16.dp))
+                    else Icon(Icons.Outlined.ArrowUpward, t("comments.reply.send"), tint = Seeli.OnGreen, modifier = Modifier.size(18.dp))
                 }
             }
             if (!sending) ErrorText(AppStore.lastError)
@@ -258,8 +258,8 @@ private fun CommentRow(
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     Row(Modifier.clip(CircleShape).background(Seeli.Green).tap { onApprove(c, true) }.padding(horizontal = 12.dp, vertical = 6.dp),
                         verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-                        Icon(Icons.Outlined.Check, null, tint = Color.White, modifier = Modifier.size(14.dp))
-                        Text(t("thread.approve"), style = ts(12, FontWeight.Medium, Color.White))
+                        Icon(Icons.Outlined.Check, null, tint = Seeli.OnGreen, modifier = Modifier.size(14.dp))
+                        Text(t("thread.approve"), style = ts(12, FontWeight.Medium, Seeli.OnGreen))
                     }
                     Text(t("thread.keepPrivate"), style = ts(12, FontWeight.Medium, Seeli.Ink),
                         modifier = Modifier.clip(CircleShape).background(Seeli.Card).tap { onApprove(c, false) }.padding(horizontal = 12.dp, vertical = 6.dp))
@@ -291,8 +291,8 @@ private fun Badge(c: ThreadComment, isOwner: Boolean, ownerID: String, ownerName
 private fun VisibilityPill(icon: ImageVector, text: String, on: Boolean, onClick: () -> Unit) {
     Row(Modifier.clip(CircleShape).background(if (on) Seeli.Green else Seeli.Card).tap(onClick = onClick).padding(horizontal = 12.dp, vertical = 7.dp),
         verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(5.dp)) {
-        Icon(icon, null, tint = if (on) Color.White else Seeli.Ink, modifier = Modifier.size(14.dp))
-        Text(text, style = ts(12, FontWeight.Medium, if (on) Color.White else Seeli.Ink), maxLines = 1)
+        Icon(icon, null, tint = if (on) Seeli.OnGreen else Seeli.Ink, modifier = Modifier.size(14.dp))
+        Text(text, style = ts(12, FontWeight.Medium, if (on) Seeli.OnGreen else Seeli.Ink), maxLines = 1)
     }
 }
 

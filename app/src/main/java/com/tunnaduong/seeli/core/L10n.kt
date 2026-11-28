@@ -6,9 +6,12 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import java.util.Locale
 
-enum class AppLanguage(val code: String, val displayName: String, val locale: Locale) {
-    VI("vi", "Tiếng Việt", Locale("vi", "VN")),
-    JA("ja", "日本語", Locale.JAPAN);
+enum class AppLanguage(val code: String, val displayName: String, val locale: Locale, val shortName: String) {
+    VI("vi", "Tiếng Việt", Locale.forLanguageTag("vi-VN"), "VI"),
+    JA("ja", "日本語", Locale.JAPAN, "日本"),
+    EN("en", "English", Locale.ENGLISH, "EN"),
+    RU("ru", "Русский", Locale.forLanguageTag("ru-RU"), "RU"),
+    ZH("zh", "中文", Locale.SIMPLIFIED_CHINESE, "中文");
 
     companion object {
         fun from(code: String?) = entries.firstOrNull { it.code == code }
@@ -24,7 +27,7 @@ object L10n {
     private const val PREFS = "seeli.prefs"
     private const val KEY = "seeli.language"
 
-    var language by mutableStateOf(AppLanguage.VI)
+    var language by mutableStateOf(AppLanguage.EN)
         private set
 
     private val tables = mutableMapOf<AppLanguage, Map<String, String>>()
@@ -33,8 +36,13 @@ object L10n {
     fun init(context: Context) {
         appContext = context.applicationContext
         val saved = prefs().getString(KEY, null)
-        language = AppLanguage.from(saved)
-            ?: if (Locale.getDefault().language == "ja") AppLanguage.JA else AppLanguage.VI
+        language = AppLanguage.from(saved) ?: when (Locale.getDefault().language) {
+            "ja" -> AppLanguage.JA
+            "vi" -> AppLanguage.VI
+            "ru" -> AppLanguage.RU
+            "zh" -> AppLanguage.ZH
+            else -> AppLanguage.EN
+        }
     }
 
     /** Widgets run in the same process here, but re-read in case the app process was restarted. */

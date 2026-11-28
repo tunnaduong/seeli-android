@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_today_desc">拍下你所看到的，并在某个瞬间归来时收到提醒。</string>
+    <string name="widget_words_desc">你曾留下的只言片语——不是照片，而是文字。</string>
+    <string name="widget_today_name">今日</string>
+    <string name="widget_words_name">那一天的寄语</string>
+</resources>

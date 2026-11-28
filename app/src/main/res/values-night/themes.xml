@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Seeli" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/seeli_bg</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+    <color name="seeli_bg">#161713</color>
+    <color name="seeli_green">#7D8D65</color>
+    <color name="ic_launcher_background">#161713</color>
+</resources>

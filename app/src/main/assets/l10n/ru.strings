@@ -1,0 +1,377 @@
+/* Common */
+"common.back" = "Назад";
+"common.cancel" = "Отмена";
+"common.close" = "Закрыть";
+"common.delete" = "Удалить";
+"common.home" = "Главная";
+"common.save" = "Сохранить";
+
+/* Auth */
+"login.title" = "С возвращением.";
+"login.button" = "Войти";
+"login.noAccount" = "Нет аккаунта?";
+"login.signUp" = "Создать аккаунт";
+"login.localNote" = "Ваши фото бережно хранятся и вернутся примерно через 30 дней.";
+"field.email" = "Эл. почта";
+"field.password" = "Пароль";
+"field.password.hint" = "Минимум 8 символов";
+"field.name" = "Имя";
+"field.name.placeholder" = "Например: Алексей";
+"field.handle" = "Имя пользователя";
+"field.bio" = "О себе";
+"field.bio.placeholder" = "Что вам нравится замечать?";
+"signup.header" = "Начните с SEELI.";
+"signup.title" = "Создать аккаунт";
+"signup.subtitle" = "Без лайков и подписчиков. Только то, что вы действительно видите.";
+"signup.promise" = "Я понимаю, что фото не появятся сразу после съёмки, а друзья — только те, кого я встречал(а) вживую.";
+"signup.button" = "Создать аккаунт";
+"created.title" = "Аккаунт создан.";
+"created.welcome" = "Добро пожаловать, %@.";
+"created.p1" = "Смотрите внимательнее, а не сохраняйте больше.";
+"created.p2" = "Снимите и отпустите. Примерно через 30 дней вы встретите этот момент снова.";
+"created.p3" = "Добавляйте по QR-коду тех, с кем действительно виделись.";
+"created.start" = "Начать";
+
+/* Home */
+"home.question" = "Что вы увидели сегодня?";
+"home.sleeping" = "%d моментов тихо спят и ждут встречи.";
+"home.reunion.title" = "Момент вернулся";
+"home.reunion.one" = "Взгляните на него сегодняшними глазами.";
+"home.reunion.many" = "%d моментов ждут вас.";
+
+/* Camera */
+"camera.title" = "Сделать фото";
+"camera.hint" = "Фото не появится сразу после съёмки.";
+"camera.shutter" = "Снять";
+"camera.released" = "Отпущено.";
+"camera.denied" = "SEELI нужен доступ к камере, чтобы запечатлеть то, что вы видите.";
+"camera.openSettings" = "Открыть настройки";
+"camera.unavailable" = "На этом устройстве нет камеры.\nВы всё равно можете нажать съёмку, чтобы попробовать.";
+
+/* Post */
+"post.subtitle" = "Добавьте пару слов к фото.";
+"post.hidden.title" = "Фото пока убрано на хранение.";
+"post.hidden.body" = "Пройдёт время, и вы встретите его снова\nв самый неожиданный момент.";
+"post.hidden.auto" = "Время съёмки записывается автоматически.";
+"post.note.title" = "Пара слов об этом моменте.";
+"post.note.subtitle" = "Запишите, что вы увидели или почувствовали.";
+"post.note.placeholder" = "Что вы увидели? Что почувствовали?";
+"post.place.title" = "Записать место";
+"post.place.private" = "Сохраняется только в ваших воспоминаниях.";
+"post.place.locating" = "Определяем местоположение…";
+"post.place.off" = "Место не записывается.";
+"post.next" = "Далее";
+"post.next.hint" = "На следующем шаге вы выберете, с кем поделиться.";
+
+/* Audience */
+"audience.subtitle" = "Выберите получателей.";
+"audience.title" = "С кем вы хотите разделить этот кадр?";
+"audience.hint" = "Аудиторию можно выбирать для каждой записи.";
+"audience.onlyMe.desc" = "Оставить только для себя";
+"audience.circle.desc" = "Отправить тем, с кем вы на связи";
+"audience.public.desc" = "Открыто для всех";
+"audience.soon" = "Скоро";
+"audience.lock.title" = "Фото не будет видно сразу.";
+"audience.lock.body" = "Кого бы вы ни выбрали, вы снова встретите его спустя время.";
+"audience.submit" = "Опубликовать так";
+"audience.cancel" = "Отменить и вернуться";
+
+/* Posted */
+"posted.title" = "Отпущено.";
+"posted.body" = "Фото убрано на хранение.\nПримерно через 30 дней оно вернётся к вам.";
+"posted.lookUp" = "А теперь отложите телефон\nи посмотрите на мир вокруг.";
+"posted.home" = "На главную";
+
+/* Connect */
+"connect.subtitle" = "Встретьте мир, который увидел кто-то другой.";
+"connect.qr.title" = "Добавить по QR-коду";
+"connect.qr.body" = "Обменяйтесь QR-кодами при личной встрече.";
+"connect.feed.title" = "Мир глазами другого";
+"connect.feed.subtitle" = "От встречи со снимком — к новому взгляду.";
+"connect.place" = "Место съёмки";
+"connect.prompt" = "Какие чувства вызывает у вас этот кадр?";
+"connect.send" = "Отправить взгляд";
+"connect.edit" = "Изменить взгляд";
+"connect.sent" = "Ваш отправленный взгляд";
+"connect.privacy" = "Комментарии видны только автору и вам.";
+"connect.comment.placeholder" = "Напишите, что вы чувствуете…";
+"connect.empty" = "В вашем кругу пока никого нет.\nВстретьтесь вживую и обменяйтесь QR-кодами.";
+
+/* Memories */
+"memories.subtitle" = "Проследите увиденный мир через слова.";
+"memories.count" = "Записей в этом месяце: %d";
+"memories.empty" = "В этом месяце пока нет записей.\nЧто вы увидели сегодня?";
+"memories.footer" = "Вспоминайте не по фотографиям, а по оставленным словам.";
+"memories.wordsOfDay" = "Слова того дня";
+"memories.noWords" = "(без слов — только момент)";
+"memories.comments" = "Комментарии (%d)";
+"memories.reunited" = "Вернулось";
+"memories.sleeping" = "Спит";
+"memories.delete.title" = "Удалить это воспоминание?";
+"memories.delete.body" = "Фото и заметка будут удалены навсегда без возможности восстановления.";
+"comments.title" = "Комментарии";
+"comments.empty" = "Комментариев пока нет.\nКогда друзья поделятся своим взглядом, они появятся здесь.";
+
+/* Reunion */
+"reunion.subtitle" = "Встреча с моментом.";
+"reunion.daysAgo" = "%d дн. назад вы видели это.";
+"reunion.then" = "ТОГДА";
+"reunion.now" = "Что вы видите сейчас?";
+"reunion.now.hint" = "Тот же снимок, но, возможно, вы уже изменились.";
+"reunion.placeholder" = "Ваш взгляд сегодня…";
+"reunion.save" = "Сохранить новый взгляд";
+"reunion.saved" = "Сохранено";
+
+/* Profile */
+"profile.subtitle" = "SEELI и вы.";
+"profile.edit" = "Редактировать профиль";
+"profile.section" = "Связи и настройки";
+"profile.friends" = "Друзья · Круг";
+"profile.friends.sub" = "Управление контактами и доступом";
+"profile.privacy" = "Приватность и безопасность";
+"profile.privacy.sub" = "Видимость · Чёрный список · Жалобы";
+"profile.settings" = "Настройки";
+"profile.settings.sub" = "Аккаунт и уведомления";
+"profile.verified.sub" = "Подтверждение личности (скоро)";
+"profile.footer" = "На связи с миром в своём ритме.";
+"friends.subtitle" = "Люди, которых вы встречали.";
+"friends.count" = "%d чел. в вашем кругу";
+
+/* Friend */
+"friend.subtitle" = "Друг в кругу";
+"friend.bio" = "О себе";
+"friend.bio.empty" = "Пока ничего не написано.";
+"friend.memo" = "Личная заметка";
+"friend.memo.hint" = "Эту заметку видите только вы.";
+"friend.memo.placeholder" = "Где вы познакомились?";
+"friend.safety" = "Отношения и безопасность";
+"friend.report" = "Сообщить о проблеме";
+"friend.report.sub" = "Уведомить команду SEELI об этом аккаунте";
+"friend.report.confirm" = "Пожаловаться на этот аккаунт?";
+"friend.reported" = "Спасибо. Жалоба отправлена.";
+"friend.block" = "Заблокировать";
+"friend.block.sub" = "Прекратить любое взаимодействие";
+"friend.block.confirm" = "Заблокировать этого человека? Он будет удалён из вашего круга.";
+"friend.remove" = "Удалить из друзей";
+"friend.remove.sub" = "Разорвать связь";
+"friend.remove.confirm" = "Удалить этого человека из друзей?";
+"friend.footer" = "Вы всегда можете пересмотреть свои контакты.";
+"friend.gone" = "Контент не найден.";
+
+/* Privacy */
+"privacy.default" = "Аудитория по умолчанию";
+"privacy.p1" = "Фотографии никогда не показываются сразу после съёмки — даже друзьям.";
+"privacy.p2" = "Местоположение сохраняется только в ваших воспоминаниях.";
+"privacy.p3" = "Комментарии видны только автору и комментатору.";
+"privacy.p4" = "Никаких лайков, подписчиков, просмотров и рейтингов.";
+"privacy.blocked" = "Заблокированные";
+"privacy.blocked.empty" = "Вы никого не заблокировали.";
+"privacy.unblock" = "Разблокировать";
+
+/* Settings */
+"settings.language" = "Язык";
+"settings.notifications" = "Уведомления";
+"settings.notifications.reunion" = "Когда момент возвращается";
+"settings.notifications.hint" = "SEELI уведомляет только о возвращении старого фото. Других уведомлений нет.";
+"settings.demo" = "Демо-режим";
+"settings.demo.toggle" = "Фото возвращаются через ~1 мин";
+"settings.demo.hint" = "Попробуйте встречу со снимком без ожидания 30 дней. Действует только для новых фото.";
+"settings.account" = "Аккаунт";
+"settings.logout" = "Выйти";
+"settings.logout.confirm" = "Выйти из SEELI?";
+"settings.delete" = "Удалить аккаунт";
+"settings.delete.confirm" = "Удалить аккаунт навсегда?";
+"settings.delete.body" = "Все фото, воспоминания и связи будут безвозвратно удалены из SEELI. Если вы входили через Apple, доступ SEELI к вашему Apple ID также будет отозван.";
+"verified.title" = "Подтверждённый аккаунт";
+"verified.body" = "Функция подтверждения личности скоро появится, чтобы вы могли общаться ещё спокойнее.";
+
+/* QR */
+"myqr.title" = "Мой QR-код";
+"myqr.subtitle" = "Покажите это человеку при встрече.";
+"myqr.hint" = "При личной встрече дайте отсканировать этот код или продиктуйте 8-значный код.";
+"myqr.scan" = "Сканировать чужой код";
+"scan.hint" = "Поместите QR-код друга в рамку.";
+"scan.unavailable" = "Камера недоступна на этом устройстве.";
+"scan.manual" = "Или введите 8-значный код под QR";
+"scan.add" = "Добавить";
+"scan.invalid" = "Неверный код. Код состоит из 8 символов.";
+"addFriend.question" = "Вы встречались с этим человеком вживую?\nОтправьте запрос — когда он примет, вы окажетесь в кругу друг друга.";
+"addFriend.connect" = "Добавить";
+"addFriend.done" = "Готово! Теперь вы в кругу друг друга.";
+"addFriend.already" = "Вы уже добавлены в друзья.";
+"addFriend.self" = "Это ваш собственный код.";
+
+/* Notifications */
+"notification.reunion" = "Момент, который вы когда-то видели, вернулся.";
+"myqr.rotate" = "Обновить код (старый перестанет работать)";
+"addFriend.notFound" = "Пользователь с таким кодом не найден.";
+"memories.uploading" = "Ожидает загрузки";
+"settings.server" = "Сервер";
+"settings.server.hint" = "Адрес API SEELI. Оставьте пустым для адреса по умолчанию. Нажмите Enter для сохранения.";
+"error.generic" = "Что-то пошло не так. Попробуйте ещё раз.";
+"error.network" = "Нет связи с сервером. Проверьте интернет и попробуйте снова.";
+"error.invalid_credentials" = "Неверная почта или пароль.";
+"error.handle_taken" = "Это имя пользователя уже занято.";
+"error.email_taken" = "Эта почта уже зарегистрирована.";
+"error.invalid_handle" = "Имя пользователя: строчные латинские буквы, цифры, . _ - (2–30 символов).";
+"error.invalid_email" = "Некорректный адрес эл. почты.";
+"error.weak_password" = "Пароль должен содержать не менее 8 символов.";
+"error.name_required" = "Введите отображаемое имя.";
+"error.not_found" = "Контент не найден.";
+"error.too_many_requests" = "Слишком много попыток. Подождите минуту.";
+"error.unauthorized" = "Сессия истекла. Войдите снова.";
+"error.not_yet" = "Время возвращения этого фото ещё не пришло.";
+"error.photo_too_large" = "Фото слишком большое.";
+"error.account_suspended" = "Этот аккаунт заблокирован. Если это ошибка, свяжитесь с SEELI.";
+"auth.or" = "или";
+"auth.apple" = "Продолжить с Apple";
+"auth.google" = "Продолжить с Google";
+"created.handle" = "Ваше имя пользователя @%@ — его можно изменить в Профиле.";
+"error.provider_disabled" = "Этот способ входа пока отключён.";
+"error.invalid_token" = "Не удалось подтвердить аккаунт. Попробуйте снова.";
+"error.provider_unreachable" = "Не удалось связаться с Apple/Google. Попробуйте позже.";
+
+/* One-time view of a friend's photo */
+"connect.once.tap" = "Нажмите, чтобы посмотреть";
+"connect.once.hint" = "Можно открыть только один раз";
+"connect.once.seen" = "Вы уже видели этот момент";
+"connect.once.seen.at" = "Просмотрено · %@";
+"connect.once.viewer" = "Только один раз. После закрытия фото больше не откроется.";
+"connect.once.close" = "Убрать фото";
+"connect.once.confirm.title" = "Просмотр только один раз";
+"connect.once.confirm.body" = "После закрытия вы больше не сможете открыть это фото. Посмотрите внимательно.";
+"connect.once.confirm.ok" = "Смотреть";
+"common.cancel.later" = "Позже";
+"error.already_viewed" = "Вы уже смотрели это фото. Каждый момент можно увидеть только раз.";
+"connect.once.now" = "Один раз";
+"settings.notifications.friends" = "Когда друг делится моментом";
+"settings.notifications.friends.hint" = "Уведомления о новых фото в вашем кругу. Фото друзей можно увидеть только один раз.";
+
+"comments.reply" = "Ответить";
+"comments.reply.placeholder" = "Написать ответ…";
+"comments.reply.send" = "Отправить";
+"comments.reply.yours" = "Вы ответили";
+"comments.reply.edit" = "Изменить";
+"connect.reply.from" = "%@ ответил(а)";
+"connect.once.protected" = "Фото защищено — снимки и запись экрана отключены";
+"notification.comment" = "%@ поделился(-ась) взглядом на ваш момент.";
+"notification.reply" = "%@ ответил(а) на ваш взгляд.";
+"notification.friend" = "%@ теперь у вас в друзьях.";
+
+/* ---- Widgets ---- */
+"home.question" = "Что вы увидели сегодня?";
+"widget.inline" = "Что вы увидели сегодня?";
+"widget.reunion.title" = "Момент вернулся";
+"widget.reunion.tap" = "Нажмите для встречи";
+"widget.reunion.count" = "%d моментов ждут вас";
+"widget.sleeping" = "%d моментов спят";
+"widget.sleeping.hint" = "Они вернутся, когда вы меньше всего ждёте.";
+"widget.calm" = "Пока ничего не вернулось. Оглянитесь вокруг.";
+"widget.wordsOfDay" = "Слова того дня";
+"widget.words.empty" = "Слова, оставленные при съёмке, появятся здесь.";
+"widget.signedOut" = "Откройте SEELI, чтобы начать.";
+"widget.today.name" = "Сегодня";
+"widget.today.desc" = "Снимайте то, что видите, и узнавайте, когда момент возвращается.";
+"widget.words.name" = "Слова того дня";
+"widget.words.desc" = "Слова, оставленные однажды — не фото, а только строки.";
+"widget.lock.desc" = "Напоминание смотреть на мир и узнавать о возвращении моментов.";
+
+/* 2026-11 social update */
+"common.done" = "Готово";
+"audience.close.desc" = "Только отмеченные близкие друзья";
+"audience.selected.desc" = "Выбрать конкретных получателей";
+"audience.close.pick" = "Выбрать близких друзей";
+"audience.close.manage" = "Изменить близких друзей";
+"audience.close.none" = "Близких друзей пока нет";
+"audience.close.count" = "%d близких друзей";
+"audience.selected.count" = "Выбрано: %d";
+"picker.search" = "Поиск друзей";
+"picker.clear" = "Сбросить";
+"close.title" = "Близкие друзья";
+"close.hint" = "Записи для «Близких друзей» видят только отмеченные звёздочкой. Они не узнают об этом.";
+"close.add" = "Добавить в близкие друзья";
+"close.remove" = "Убрать из близких друзей";
+"close.toggle" = "Близкий друг";
+"close.toggle.hint" = "Видит моменты, которыми вы делитесь с близкими друзьями.";
+"friends.close.hint" = "Нажмите на звёздочку, чтобы отметить близких друзей.";
+"requests.title" = "Запросы в друзья";
+"requests.subtitle" = "Просмотрите тех, кто хочет добавиться.";
+"requests.banner.title" = "Кто-то хочет стать вашим другом";
+"requests.incoming" = "Входящие";
+"requests.incoming.empty" = "Ожидающих запросов нет.";
+"requests.accept" = "Принять";
+"requests.decline" = "Отклонить";
+"requests.sent" = "Отправленные";
+"requests.waiting" = "Ожидает ответа";
+"requests.cancel" = "Отменить запрос";
+"requests.incoming.count" = "%d входящих запросов";
+"requests.sent.count" = "%d отправленных запросов";
+"addFriend.request" = "Отправить запрос";
+"addFriend.requested" = "Запрос отправлен. Когда %@ примет, вы окажетесь в кругу друг друга.";
+"addFriend.requestedMe" = "%@ отправил(а) вам запрос в друзья.";
+"connect.section.new" = "Новое";
+"connect.section.new.empty" = "Вы просмотрели все новые моменты.";
+"connect.section.active" = "Беседы";
+"connect.older.show" = "Показать старые (%d)";
+"connect.older.hide" = "Скрыть старые";
+"connect.activity" = "Активность";
+"connect.activity.all" = "Все";
+"connect.activity.less" = "Свернуть";
+"connect.comments.open" = "Комментарии (%d)";
+"activity.comment" = "%@ прокомментировал(а) ваш момент";
+"activity.comment.pending" = "%@ хочет показать комментарий кругу — ждёт одобрения";
+"activity.reply" = "%@ ответил(а) на ваш комментарий";
+"activity.request" = "%@ хочет стать вашим другом";
+"activity.friend" = "%@ стал(а) вашим другом";
+"home.connect.badge" = "%d новых";
+"memories.pending" = "%d на проверке";
+"thread.empty" = "Комментариев пока нет. Поделитесь впечатлениями первым.";
+"thread.owner.hint" = "Комментарии «для круга» увидят все только после вашего одобрения.";
+"thread.friend.hint" = "По умолчанию ваш комментарий видит только %1$@. Чтобы его увидел весь круг, нужно одобрение %1$@.";
+"thread.you" = "Вы";
+"thread.edited" = "изменено";
+"thread.approve" = "Показать кругу";
+"thread.keepPrivate" = "Только мне";
+"thread.pending" = "На проверке";
+"thread.private" = "Только %@";
+"thread.private.owner" = "Личное";
+"thread.private.reply" = "Личный ответ";
+"thread.public" = "Круг";
+"thread.editing" = "Редактирование";
+"thread.replyingTo" = "Ответ для %@";
+"thread.only" = "Только %@";
+"thread.circle" = "Круг";
+"thread.circle.hint" = "Все увидят после одобрения %@.";
+"thread.delete.confirm" = "Удалить этот комментарий и ответы на него?";
+"signup.terms" = "Регистрируясь, вы принимаете [Условия использования](https://seeli.cam/terms) и [Политику конфиденциальности](https://seeli.cam/privacy) SEELI.";
+"signup.check.name" = "Введите отображаемое имя.";
+"signup.check.handle" = "Имя пользователя: 2–30 символов (строчные буквы, цифры, точка, подчёркивание, дефис).";
+"signup.check.email" = "Введите корректный адрес эл. почты.";
+"signup.check.password" = "Пароль должен содержать не менее 8 символов.";
+"settings.legal" = "Правовая информация";
+"settings.terms" = "Условия использования";
+"settings.privacyPolicy" = "Политика конфиденциальности";
+"whatsnew.title" = "Что нового?";
+"whatsnew.subtitle" = "SEELI 1.3 — по вашим отзывам.";
+"whatsnew.comments.title" = "Комментарии как диалог";
+"whatsnew.comments.body" = "Комментируйте сколько угодно и отвечайте друг другу. По умолчанию их видит только автор; для круга нужно его одобрение.";
+"whatsnew.audience.title" = "Близкие друзья и выбор получателей";
+"whatsnew.audience.body" = "Отмечайте звёздочкой близких друзей или выбирайте получателей для каждого момента.";
+"whatsnew.requests.title" = "Запросы в друзья";
+"whatsnew.requests.body" = "Сканирование QR теперь отправляет запрос — вы станете друзьями после подтверждения.";
+"whatsnew.connect.title" = "Более аккуратный Let's connect";
+"whatsnew.connect.body" = "Новые записи и активность наверху, а старые скрываются. Красный значок на главной подскажет о новом.";
+"whatsnew.once.title" = "«Просмотрено» только при реальном просмотре";
+"whatsnew.once.body" = "Фото друзей видны в ленте, но считаются просмотренными только когда действительно находятся на экране.";
+"whatsnew.dark.title" = "Тёмная тема";
+"whatsnew.dark.body" = "SEELI подстраивается под светлую или тёмную тему устройства. Переключить можно в Настройках.";
+"whatsnew.gestures.title" = "Свайп назад и обновление потягиванием";
+"whatsnew.gestures.body" = "Свайп от левого края возвращает назад; потяните вниз в «Моих воспоминаниях» для обновления.";
+"whatsnew.done" = "Начать";
+"settings.appearance" = "Оформление";
+"settings.appearance.system" = "Как в системе";
+"settings.appearance.light" = "Светлая";
+"settings.appearance.dark" = "Тёмная";
+"settings.appearance.dynamic" = "Цвета Material You";
+"settings.appearance.dynamic.hint" = "Подбирать акцентные цвета под ваши обои.";
+"error.google_unavailable" = "Не удалось войти через Google на этом устройстве. Проверьте, добавлен ли аккаунт Google, попробуйте позже или войдите по почте.";

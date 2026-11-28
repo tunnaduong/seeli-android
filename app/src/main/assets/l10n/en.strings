@@ -1,0 +1,377 @@
+/* Common */
+"common.back" = "Back";
+"common.cancel" = "Cancel";
+"common.close" = "Close";
+"common.delete" = "Delete";
+"common.home" = "Home";
+"common.save" = "Save";
+
+/* Auth */
+"login.title" = "Welcome back.";
+"login.button" = "Log in";
+"login.noAccount" = "Don't have an account?";
+"login.signUp" = "Create account";
+"login.localNote" = "Your photos are kept safe, and only return after about 30 days.";
+"field.email" = "Email";
+"field.password" = "Password";
+"field.password.hint" = "At least 8 characters";
+"field.name" = "Display name";
+"field.name.placeholder" = "e.g. Alex";
+"field.handle" = "Username";
+"field.bio" = "Bio";
+"field.bio.placeholder" = "What do you like to notice?";
+"signup.header" = "Begin with SEELI.";
+"signup.title" = "Create account";
+"signup.subtitle" = "No likes, no followers. Only what you truly see.";
+"signup.promise" = "I understand that photos won't appear right after taking them, and friends are only people I've met in person.";
+"signup.button" = "Create account";
+"created.title" = "Account created.";
+"created.welcome" = "Welcome, %@.";
+"created.p1" = "Look more closely, instead of saving more.";
+"created.p2" = "Capture and let go. About 30 days later, you'll meet it again.";
+"created.p3" = "Connect via QR code with people you've truly met.";
+"created.start" = "Get started";
+
+/* Home */
+"home.question" = "What did you see today?";
+"home.sleeping" = "%d moments sleeping quietly, waiting to return.";
+"home.reunion.title" = "A moment has returned";
+"home.reunion.one" = "See it through today's eyes.";
+"home.reunion.many" = "%d moments are waiting for you.";
+
+/* Camera */
+"camera.title" = "Take a photo";
+"camera.hint" = "Your photo won't appear right after taking it.";
+"camera.shutter" = "Capture";
+"camera.released" = "Let go.";
+"camera.denied" = "SEELI needs camera access to capture what you see.";
+"camera.openSettings" = "Open Settings";
+"camera.unavailable" = "This device has no camera.\nYou can still tap capture to try the flow.";
+
+/* Post */
+"post.subtitle" = "Add a note to your photo.";
+"post.hidden.title" = "Your photo is tucked away for now.";
+"post.hidden.body" = "As time passes, you'll meet it again\nwhen you least expect it.";
+"post.hidden.auto" = "The capture time is recorded automatically.";
+"post.note.title" = "A few words for this moment.";
+"post.note.subtitle" = "Write down what you saw, or what you felt.";
+"post.note.placeholder" = "What did you see? How did it feel?";
+"post.place.title" = "Record location";
+"post.place.private" = "Saved only in your own memories.";
+"post.place.locating" = "Finding location…";
+"post.place.off" = "Location not recorded.";
+"post.next" = "Next";
+"post.next.hint" = "In the next step, you'll choose who to share with.";
+
+/* Audience */
+"audience.subtitle" = "Choose recipients.";
+"audience.title" = "Who would you like to share this view with?";
+"audience.hint" = "You can choose the audience for each post.";
+"audience.onlyMe.desc" = "Keep as a memory for yourself";
+"audience.circle.desc" = "Send to people you've connected with";
+"audience.public.desc" = "Public to everyone";
+"audience.soon" = "Coming soon";
+"audience.lock.title" = "Your photo won't be visible right away.";
+"audience.lock.body" = "No matter who you choose, you'll meet it again after some time.";
+"audience.submit" = "Post with this setting";
+"audience.cancel" = "Cancel and go back";
+
+/* Posted */
+"posted.title" = "Let go.";
+"posted.body" = "Your photo has been tucked away.\nIn about 30 days, it will return to you.";
+"posted.lookUp" = "Now, put your phone down\nand look at the world around you.";
+"posted.home" = "Back to home";
+
+/* Connect */
+"connect.subtitle" = "Meet the world someone else has seen.";
+"connect.qr.title" = "Connect with QR code";
+"connect.qr.body" = "Exchange QR codes with someone you've met in person.";
+"connect.feed.title" = "A world someone saw";
+"connect.feed.subtitle" = "From a reunion with a photo, to a new perspective.";
+"connect.place" = "Captured at";
+"connect.prompt" = "How does this scene make you feel?";
+"connect.send" = "Send your perspective";
+"connect.edit" = "Edit your perspective";
+"connect.sent" = "Perspective you sent";
+"connect.privacy" = "Comments are only visible to the author and you.";
+"connect.comment.placeholder" = "Write what you feel…";
+"connect.empty" = "No one in your circle yet.\nMeet in person and exchange QR codes.";
+
+/* Memories */
+"memories.subtitle" = "Trace the world you've seen, through words.";
+"memories.count" = "Notes this month: %d";
+"memories.empty" = "No notes this month yet.\nWhat did you see today?";
+"memories.footer" = "Remember not through photos, but through the words you left behind.";
+"memories.wordsOfDay" = "Words of that day";
+"memories.noWords" = "(no words — just the moment)";
+"memories.comments" = "View comments (%d)";
+"memories.reunited" = "Reunited";
+"memories.sleeping" = "Sleeping";
+"memories.delete.title" = "Delete this memory?";
+"memories.delete.body" = "The photo and note will be permanently deleted and cannot be recovered.";
+"comments.title" = "Comments";
+"comments.empty" = "No comments yet.\nWhen friends share their perspectives, they'll appear here.";
+
+/* Reunion */
+"reunion.subtitle" = "Meet a moment again.";
+"reunion.daysAgo" = "%d days ago, you saw this.";
+"reunion.then" = "THEN";
+"reunion.now" = "What do you see now?";
+"reunion.now.hint" = "The same photo, though perhaps you've changed.";
+"reunion.placeholder" = "Your perspective today…";
+"reunion.save" = "Save new perspective";
+"reunion.saved" = "Saved";
+
+/* Profile */
+"profile.subtitle" = "SEELI and you.";
+"profile.edit" = "Edit profile";
+"profile.section" = "Connections & settings";
+"profile.friends" = "Friends · Circle";
+"profile.friends.sub" = "Manage connections and sharing";
+"profile.privacy" = "Privacy & safety";
+"profile.privacy.sub" = "Visibility · Blocked · Reports";
+"profile.settings" = "Settings";
+"profile.settings.sub" = "Account and notifications";
+"profile.verified.sub" = "Identity verification (coming soon)";
+"profile.footer" = "Connect with the world, at your own pace.";
+"friends.subtitle" = "People you've met.";
+"friends.count" = "%d people in your circle";
+
+/* Friend */
+"friend.subtitle" = "Connected friend";
+"friend.bio" = "Bio";
+"friend.bio.empty" = "No bio yet.";
+"friend.memo" = "Private note";
+"friend.memo.hint" = "Only you can see this note.";
+"friend.memo.placeholder" = "Where did you two meet?";
+"friend.safety" = "Relationship & safety";
+"friend.report" = "Report an issue";
+"friend.report.sub" = "Notify the SEELI team about this account";
+"friend.report.confirm" = "Report this account?";
+"friend.reported" = "Thank you. Your report has been received.";
+"friend.block" = "Block";
+"friend.block.sub" = "Stop all interactions with this person";
+"friend.block.confirm" = "Block this person? They will be removed from your circle.";
+"friend.remove" = "Remove friend";
+"friend.remove.sub" = "Disconnect from this person";
+"friend.remove.confirm" = "Disconnect from this person?";
+"friend.footer" = "You can always review your connections.";
+"friend.gone" = "This content could not be found.";
+
+/* Privacy */
+"privacy.default" = "Default posting audience";
+"privacy.p1" = "Photos are never shown right after capture — not even to friends.";
+"privacy.p2" = "Location is saved only in your own memories.";
+"privacy.p3" = "Comments are only visible to the author and the commenter.";
+"privacy.p4" = "No likes, followers, view counts, or leaderboards.";
+"privacy.blocked" = "Blocked people";
+"privacy.blocked.empty" = "You haven't blocked anyone.";
+"privacy.unblock" = "Unblock";
+
+/* Settings */
+"settings.language" = "Language";
+"settings.notifications" = "Notifications";
+"settings.notifications.reunion" = "When a moment returns";
+"settings.notifications.hint" = "SEELI only notifies you when an old photo returns. No other notifications.";
+"settings.demo" = "Demo mode";
+"settings.demo.toggle" = "Photos return in ~1 minute";
+"settings.demo.hint" = "Try the reunion experience without waiting 30 days. Applies only to photos taken after enabling.";
+"settings.account" = "Account";
+"settings.logout" = "Log out";
+"settings.logout.confirm" = "Log out of SEELI?";
+"settings.delete" = "Delete account";
+"settings.delete.confirm" = "Permanently delete account?";
+"settings.delete.body" = "All photos, memories, and connections will be permanently deleted from SEELI and cannot be recovered. If you signed in with Apple, SEELI's access to your Apple ID will also be revoked.";
+"verified.title" = "Verified account";
+"verified.body" = "Identity verification is on the way, to help you connect with greater peace of mind.";
+
+/* QR */
+"myqr.title" = "My QR code";
+"myqr.subtitle" = "Show this to someone you just met.";
+"myqr.hint" = "When you meet in person, let them scan this code, or read them the 8-character code.";
+"myqr.scan" = "Scan someone's code";
+"scan.hint" = "Align your friend's QR code inside the frame.";
+"scan.unavailable" = "Camera cannot be used on this device.";
+"scan.manual" = "Or enter the 8-character code below the QR";
+"scan.add" = "Add";
+"scan.invalid" = "Invalid code. Codes are 8 characters long.";
+"addFriend.question" = "Have you met this person in real life?\nSend a friend request — once they accept, you'll be in each other's circle.";
+"addFriend.connect" = "Connect";
+"addFriend.done" = "Connected! You're now in each other's circle.";
+"addFriend.already" = "You're already connected.";
+"addFriend.self" = "This is your own code.";
+
+/* Notifications */
+"notification.reunion" = "A moment you once saw has returned.";
+"myqr.rotate" = "Generate new code (the old one will expire)";
+"addFriend.notFound" = "No user found with this code.";
+"memories.uploading" = "Waiting to upload";
+"settings.server" = "Server";
+"settings.server.hint" = "SEELI API URL. Leave blank for default. Press Return to save.";
+"error.generic" = "Something went wrong. Please try again.";
+"error.network" = "Couldn't reach the server. Check your connection and try again.";
+"error.invalid_credentials" = "Incorrect email or password.";
+"error.handle_taken" = "This username is already taken.";
+"error.email_taken" = "This email is already registered.";
+"error.invalid_handle" = "Username must use lowercase letters, numbers, . _ - (2–30 characters).";
+"error.invalid_email" = "Invalid email address.";
+"error.weak_password" = "Password must be at least 8 characters.";
+"error.name_required" = "Please enter a display name.";
+"error.not_found" = "This content could not be found.";
+"error.too_many_requests" = "Too many attempts. Please wait a minute.";
+"error.unauthorized" = "Your session has expired. Please log in again.";
+"error.not_yet" = "It's not time for this photo to return yet.";
+"error.photo_too_large" = "Photo is too large.";
+"error.account_suspended" = "This account has been suspended. If you think this is a mistake, please contact SEELI.";
+"auth.or" = "or";
+"auth.apple" = "Continue with Apple";
+"auth.google" = "Continue with Google";
+"created.handle" = "Your username is @%@ — you can change it in Profile.";
+"error.provider_disabled" = "This sign-in method isn't enabled yet.";
+"error.invalid_token" = "Couldn't verify your account. Please try again.";
+"error.provider_unreachable" = "Couldn't reach Apple/Google. Please try again later.";
+
+/* One-time view of a friend's photo */
+"connect.once.tap" = "Tap to view";
+"connect.once.hint" = "Can only be opened once";
+"connect.once.seen" = "You've seen this moment";
+"connect.once.seen.at" = "Seen · %@";
+"connect.once.viewer" = "Just this once. Once closed, it cannot be opened again.";
+"connect.once.close" = "Put photo away";
+"connect.once.confirm.title" = "View once only";
+"connect.once.confirm.body" = "Once you close this photo, you won't be able to open it again. Take a good look.";
+"connect.once.confirm.ok" = "View now";
+"common.cancel.later" = "Later";
+"error.already_viewed" = "You've already viewed this photo. Each moment can only be seen once.";
+"connect.once.now" = "Once only";
+"settings.notifications.friends" = "When a friend shares a moment";
+"settings.notifications.friends.hint" = "Get notified when someone in your circle posts. Friends' photos can only be viewed once.";
+
+"comments.reply" = "Reply";
+"comments.reply.placeholder" = "Write a reply…";
+"comments.reply.send" = "Send";
+"comments.reply.yours" = "You replied";
+"comments.reply.edit" = "Edit";
+"connect.reply.from" = "%@ replied";
+"connect.once.protected" = "Protected photo — screenshots and screen recording are disabled";
+"notification.comment" = "%@ shared a perspective on your moment.";
+"notification.reply" = "%@ replied to your perspective.";
+"notification.friend" = "%@ became your friend.";
+
+/* ---- Widgets ---- */
+"home.question" = "What did you see today?";
+"widget.inline" = "What did you see today?";
+"widget.reunion.title" = "A moment has returned";
+"widget.reunion.tap" = "Tap to reunite";
+"widget.reunion.count" = "%d moments waiting";
+"widget.sleeping" = "%d moments sleeping";
+"widget.sleeping.hint" = "They'll return when you least expect it.";
+"widget.calm" = "Nothing to check right now. Look around you.";
+"widget.wordsOfDay" = "Words of that day";
+"widget.words.empty" = "The words you leave when taking photos will appear here.";
+"widget.signedOut" = "Open SEELI to begin.";
+"widget.today.name" = "Today";
+"widget.today.desc" = "Capture what you see, and know when a moment returns.";
+"widget.words.name" = "Words of that day";
+"widget.words.desc" = "A note you once left behind — not the photo, just the words.";
+"widget.lock.desc" = "A gentle reminder to look at the world, and know when a moment returns.";
+
+/* 2026-11 social update */
+"common.done" = "Done";
+"audience.close.desc" = "Only close friends you've starred";
+"audience.selected.desc" = "Pick specific people for this moment";
+"audience.close.pick" = "Choose close friends";
+"audience.close.manage" = "Edit close friends";
+"audience.close.none" = "No close friends yet";
+"audience.close.count" = "%d close friends";
+"audience.selected.count" = "%d selected";
+"picker.search" = "Search friends";
+"picker.clear" = "Clear";
+"close.title" = "Close friends";
+"close.hint" = "Posts set to \"Close friends\" are only visible to starred friends. They won't know they were starred.";
+"close.add" = "Add to close friends";
+"close.remove" = "Remove from close friends";
+"close.toggle" = "Close friend";
+"close.toggle.hint" = "Sees moments you share with close friends.";
+"friends.close.hint" = "Tap the star to mark close friends.";
+"requests.title" = "Friend requests";
+"requests.subtitle" = "Review people who want to connect with you.";
+"requests.banner.title" = "Someone wants to be your friend";
+"requests.incoming" = "Incoming";
+"requests.incoming.empty" = "No pending requests.";
+"requests.accept" = "Accept";
+"requests.decline" = "Decline";
+"requests.sent" = "Sent";
+"requests.waiting" = "Waiting for response";
+"requests.cancel" = "Cancel request";
+"requests.incoming.count" = "%d incoming requests";
+"requests.sent.count" = "%d sent requests";
+"addFriend.request" = "Send friend request";
+"addFriend.requested" = "Request sent. Once %@ accepts, you'll be in each other's circle.";
+"addFriend.requestedMe" = "%@ sent you a friend request.";
+"connect.section.new" = "New";
+"connect.section.new.empty" = "You've seen all new moments.";
+"connect.section.active" = "Conversations";
+"connect.older.show" = "Show older (%d)";
+"connect.older.hide" = "Hide older";
+"connect.activity" = "Activity";
+"connect.activity.all" = "See all";
+"connect.activity.less" = "Show less";
+"connect.comments.open" = "Comments (%d)";
+"activity.comment" = "%@ commented on your moment";
+"activity.comment.pending" = "%@ wants the circle to see their comment — waiting for approval";
+"activity.reply" = "%@ replied to your comment";
+"activity.request" = "%@ wants to be your friend";
+"activity.friend" = "%@ became your friend";
+"home.connect.badge" = "%d new";
+"memories.pending" = "%d pending";
+"thread.empty" = "No comments yet. Be the first to share what you feel.";
+"thread.owner.hint" = "\"Circle\" comments only appear to everyone after you approve them.";
+"thread.friend.hint" = "By default, only %1$@ sees your comment. %1$@ must approve it for the circle to see.";
+"thread.you" = "You";
+"thread.edited" = "edited";
+"thread.approve" = "Show to circle";
+"thread.keepPrivate" = "Only me";
+"thread.pending" = "Pending";
+"thread.private" = "Only %@";
+"thread.private.owner" = "Private";
+"thread.private.reply" = "Private reply";
+"thread.public" = "Circle";
+"thread.editing" = "Editing comment";
+"thread.replyingTo" = "Replying to %@";
+"thread.only" = "Only %@";
+"thread.circle" = "Circle";
+"thread.circle.hint" = "Everyone will see it once %@ approves.";
+"thread.delete.confirm" = "Delete this comment and its replies?";
+"signup.terms" = "By signing up, you agree to SEELI's [Terms of Use](https://seeli.cam/terms) and [Privacy Policy](https://seeli.cam/privacy).";
+"signup.check.name" = "Please enter a display name.";
+"signup.check.handle" = "Username must be 2–30 characters: lowercase letters, numbers, dots, underscores, or hyphens.";
+"signup.check.email" = "Please enter a valid email address.";
+"signup.check.password" = "Password must be at least 8 characters.";
+"settings.legal" = "Legal";
+"settings.terms" = "Terms of Use";
+"settings.privacyPolicy" = "Privacy Policy";
+"whatsnew.title" = "What's new?";
+"whatsnew.subtitle" = "SEELI 1.3 — shaped by your feedback.";
+"whatsnew.comments.title" = "Comments as conversations";
+"whatsnew.comments.body" = "Comment as many times as you like and reply to each other. Private to the owner by default; the owner approves comments for the circle.";
+"whatsnew.audience.title" = "Close friends & Pick people";
+"whatsnew.audience.body" = "Star friends for close-friends-only posts, or pick individual recipients for each moment.";
+"whatsnew.requests.title" = "Friend requests";
+"whatsnew.requests.body" = "Scanning a QR code now sends a request — you're connected once they accept.";
+"whatsnew.connect.title" = "A cleaner Let's connect";
+"whatsnew.connect.body" = "New posts and recent activity stay at the top while older posts tuck away. A red badge on Home shows what's new.";
+"whatsnew.once.title" = "Counted as \"seen\" only when actually viewed";
+"whatsnew.once.body" = "Friends' photos still appear in Let's connect, but are only marked seen when they're actually on screen — scrolling past won't count.";
+"whatsnew.dark.title" = "Dark mode";
+"whatsnew.dark.body" = "SEELI follows your device's light or dark theme, or you can switch it in Settings.";
+"whatsnew.gestures.title" = "Swipe to go back, pull to refresh";
+"whatsnew.gestures.body" = "Swipe from the left edge to go back; pull down in My Memories to refresh.";
+"whatsnew.done" = "Let's begin";
+"settings.appearance" = "Appearance";
+"settings.appearance.system" = "System";
+"settings.appearance.light" = "Light";
+"settings.appearance.dark" = "Dark";
+"settings.appearance.dynamic" = "Material You colors";
+"settings.appearance.dynamic.hint" = "Match accent colors to your wallpaper.";
+"error.google_unavailable" = "Couldn't sign in with Google on this device. Please check that a Google account is added, try again later, or sign in with email.";

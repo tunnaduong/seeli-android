@@ -61,9 +61,17 @@ object AppStore {
     /** "system", "light" or "dark" (kept in prefs, read before the first frame). */
     var appearance by mutableStateOf("system")
         private set
+    /** Material You dynamic color on Android 12+ (kept in prefs). */
+    var dynamicColor by mutableStateOf(true)
+        private set
     fun chooseAppearance(value: String) {
         appearance = value
         ctx.getSharedPreferences("seeli.prefs", Context.MODE_PRIVATE).edit().putString("seeli.appearance", value).apply()
+    }
+    fun chooseDynamicColor(value: Boolean) {
+        dynamicColor = value
+        ctx.getSharedPreferences("seeli.prefs", Context.MODE_PRIVATE).edit().putBoolean("seeli.dynamicColor", value).apply()
+        updateWidgets()
     }
 
     // Session (not persisted)
@@ -107,7 +115,9 @@ object AppStore {
 
     fun init(context: Context) {
         ctx = context.applicationContext
-        appearance = ctx.getSharedPreferences("seeli.prefs", Context.MODE_PRIVATE).getString("seeli.appearance", "system") ?: "system"
+        val prefs = ctx.getSharedPreferences("seeli.prefs", Context.MODE_PRIVATE)
+        appearance = prefs.getString("seeli.appearance", "system") ?: "system"
+        dynamicColor = prefs.getBoolean("seeli.dynamicColor", true)
         api.onUnauthorized = { if (account != null) clearSession() }
         load()
         updateWidgets()

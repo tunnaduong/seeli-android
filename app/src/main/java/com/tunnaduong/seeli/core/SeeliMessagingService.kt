@@ -58,7 +58,7 @@ object Push {
         if (ApiClient.token == null) return false
         val prefs = context.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
         if (!prefs.getBoolean("seeli.friendPush", true)) return false
-        val lang = if (L10n.language == AppLanguage.JA) "ja" else "vi"
+        val lang = L10n.language.code
         val ok = runCatching {
             ApiClient.send("PUT", "me/device", mapOf("token" to token, "platform" to "android", "lang" to lang))
         }.isSuccess

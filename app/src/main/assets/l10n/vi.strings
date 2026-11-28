@@ -372,4 +372,6 @@
 "settings.appearance.system" = "Theo máy";
 "settings.appearance.light" = "Sáng";
 "settings.appearance.dark" = "Tối";
+"settings.appearance.dynamic" = "Màu Material You";
+"settings.appearance.dynamic.hint" = "Lấy màu nhấn từ hình nền của bạn.";
 "error.google_unavailable" = "Không đăng nhập được bằng Google trên máy này. Hãy kiểm tra máy đã có tài khoản Google, thử lại sau, hoặc đăng nhập bằng email.";

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">SEELI</string>
+    <string name="app_name" translatable="false">SEELI</string>
     <string name="widget_today_desc">Chụp nhanh điều bạn thấy, và biết khi một khoảnh khắc quay lại.</string>
     <string name="widget_words_desc">Một lời bạn từng để lại — không phải ảnh, mà là con chữ.</string>
     <string name="widget_today_name">Hôm nay</string>

@@ -91,7 +91,7 @@ fun HomeScreen() {
                 Modifier.size(76.dp).shadow(10.dp, CircleShape, ambientColor = Seeli.Green.copy(alpha = 0.25f), spotColor = Seeli.Green.copy(alpha = 0.25f))
                     .clip(CircleShape).background(Seeli.Green).tap { AppStore.push(Route.Camera) },
                 contentAlignment = Alignment.Center,
-            ) { Icon(Icons.Outlined.PhotoCamera, t("camera.title"), tint = Color.White, modifier = Modifier.size(28.dp)) }
+            ) { Icon(Icons.Outlined.PhotoCamera, t("camera.title"), tint = Seeli.OnGreen, modifier = Modifier.size(28.dp)) }
         }
 
         AnimatedVisibility(due.isNotEmpty(), enter = slideInVertically { it } + fadeIn(), exit = fadeOut()) {

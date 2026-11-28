@@ -372,4 +372,6 @@
 "settings.appearance.system" = "端末に合わせる";
 "settings.appearance.light" = "ライト";
 "settings.appearance.dark" = "ダーク";
+"settings.appearance.dynamic" = "Material You カラー";
+"settings.appearance.dynamic.hint" = "壁紙に合わせてアクセントカラーを変えます。";
 "error.google_unavailable" = "この端末ではGoogleでログインできませんでした。Googleアカウントが追加されているか確認するか、時間をおいて再度お試しください。メールでもログインできます。";

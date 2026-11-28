@@ -116,6 +116,9 @@ object NotificationService {
         val body = when (L10n.language) {
             AppLanguage.JA -> "さんが瞬間をシェアしました。写真は一度だけ見られます。"
             AppLanguage.VI -> "vừa chia sẻ một khoảnh khắc. Ảnh chỉ hiện một lần thôi."
+            AppLanguage.EN -> "just shared a moment. The photo can only be seen once."
+            AppLanguage.RU -> "только что поделился(-ась) моментом. Фото можно увидеть лишь раз."
+            AppLanguage.ZH -> "刚刚分享了一个瞬间。照片只能看一次。"
         }
         post(context, CH_FRIENDS, post.id.hashCode(), post.author.name, body, "seeli://connect")
     }
@@ -190,8 +193,8 @@ object LocationService {
             }.getOrNull() ?: return@withContext null
             val parts = listOfNotNull(address.adminArea, address.locality ?: address.subAdminArea).distinct()
             when (L10n.language) {
-                AppLanguage.JA -> parts.joinToString("")
-                AppLanguage.VI -> parts.reversed().joinToString(", ")
+                AppLanguage.JA, AppLanguage.ZH -> parts.joinToString("")
+                AppLanguage.VI, AppLanguage.EN, AppLanguage.RU -> parts.reversed().joinToString(", ")
             }.ifEmpty { null }
         }
     }

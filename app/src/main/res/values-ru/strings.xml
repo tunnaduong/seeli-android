@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_today_desc">Снимайте то, что видите, и узнавайте, когда момент возвращается.</string>
+    <string name="widget_words_desc">Слова, оставленные однажды — не фото, а только строки.</string>
+    <string name="widget_today_name">Сегодня</string>
+    <string name="widget_words_name">Слова того дня</string>
+</resources>

@@ -99,7 +99,7 @@ fun EyeLogo(size: Dp = 36.dp, closed: Boolean = false, color: Color = Seeli.Ink)
 @Composable
 fun Avatar(initial: String, size: Dp = 44.dp) {
     Box(Modifier.size(size).clip(CircleShape).background(Seeli.Green), contentAlignment = Alignment.Center) {
-        Text(initial, style = ts((size.value * 0.38f).toInt(), FontWeight.SemiBold, Color.White))
+        Text(initial, style = ts((size.value * 0.38f).toInt(), FontWeight.SemiBold, Seeli.OnGreen))
     }
 }
 
@@ -195,14 +195,14 @@ fun LabeledField(
 @Composable
 fun LanguageSwitch() {
     val current = L10n.language
-    Row(Modifier.clip(CircleShape).background(Seeli.Card).padding(3.dp), horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+    Row(Modifier.clip(CircleShape).background(Seeli.Card).padding(3.dp), horizontalArrangement = Arrangement.spacedBy(2.dp)) {
         AppLanguage.entries.forEach { lang ->
             val on = current == lang
             Text(
-                if (lang == AppLanguage.VI) "VI" else "日本",
-                style = ts(12, FontWeight.SemiBold, if (on) Color.White else Seeli.Muted),
+                lang.shortName,
+                style = ts(11, FontWeight.SemiBold, if (on) Seeli.OnGreen else Seeli.Muted),
                 modifier = Modifier.clip(CircleShape).background(if (on) Seeli.Green else Color.Transparent)
-                    .tap { L10n.selectLanguage(lang) }.padding(horizontal = 12.dp, vertical = 6.dp),
+                    .tap { L10n.selectLanguage(lang) }.padding(horizontal = 9.dp, vertical = 5.dp),
             )
         }
     }
@@ -223,7 +223,7 @@ fun HGap(w: Dp) = Spacer(Modifier.width(w))
 fun HairLine(modifier: Modifier = Modifier) = Box(modifier.fillMaxWidth().height(1.dp).background(Seeli.Line))
 
 @Composable
-fun Capsule(text: String, modifier: Modifier = Modifier, bg: Color = Color.White, fg: Color = Seeli.Muted) {
+fun Capsule(text: String, modifier: Modifier = Modifier, bg: Color = Seeli.Surface, fg: Color = Seeli.Muted) {
     Text(text, style = ts(11, color = fg), modifier = modifier.clip(RoundedCornerShape(50)).background(bg).padding(horizontal = 12.dp, vertical = 6.dp))
 }
 

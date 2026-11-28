@@ -48,6 +48,12 @@ object DateText {
                 val f = DateTimeFormatter.ofPattern("EEEE, d 'tháng' M, yyyy", lang.locale)
                 d.format(f).replaceFirstChar { it.uppercase() }
             }
+            AppLanguage.EN -> d.format(DateTimeFormatter.ofPattern("EEEE, MMM d, yyyy", lang.locale))
+            AppLanguage.RU -> {
+                val f = DateTimeFormatter.ofPattern("EEEE, d MMMM yyyy", lang.locale)
+                d.format(f).replaceFirstChar { it.uppercase() }
+            }
+            AppLanguage.ZH -> d.format(DateTimeFormatter.ofPattern("yyyy年M月d日 EEEE", lang.locale))
         }
     }
 
@@ -61,17 +67,29 @@ object DateText {
                 "${kanji(d.monthValue)}月${kanji(d.dayOfMonth)}日 $ampm${kanji(d.hour % 12)}時$minute"
             }
             AppLanguage.VI -> String.format("%d tháng %d · %02d:%02d", d.dayOfMonth, d.monthValue, d.hour, d.minute)
+            AppLanguage.EN -> d.format(DateTimeFormatter.ofPattern("MMM d · HH:mm", lang.locale))
+            AppLanguage.RU -> d.format(DateTimeFormatter.ofPattern("d MMM · HH:mm", lang.locale))
+            AppLanguage.ZH -> String.format("%d月%d日 · %02d:%02d", d.monthValue, d.dayOfMonth, d.hour, d.minute)
         }
     }
 
     /** Long date for the reunion screen. */
     fun long(i: Instant): String {
-        val pattern = if (lang == AppLanguage.JA) "yyyy年M月d日" else "d 'tháng' M, yyyy"
+        val pattern = when (lang) {
+            AppLanguage.JA, AppLanguage.ZH -> "yyyy年M月d日"
+            AppLanguage.VI -> "d 'tháng' M, yyyy"
+            AppLanguage.EN -> "MMMM d, yyyy"
+            AppLanguage.RU -> "d MMMM yyyy"
+        }
         return zdt(i).format(DateTimeFormatter.ofPattern(pattern, lang.locale))
     }
 
-    fun monthTitle(year: Int, month: Int): String =
-        if (lang == AppLanguage.JA) "${year}年 ${month}月" else "Tháng $month, $year"
+    fun monthTitle(year: Int, month: Int): String = when (lang) {
+        AppLanguage.JA, AppLanguage.ZH -> "${year}年 ${month}月"
+        AppLanguage.VI -> "Tháng $month, $year"
+        AppLanguage.EN, AppLanguage.RU ->
+            LocalDate.of(year, month, 1).format(DateTimeFormatter.ofPattern("LLLL yyyy", lang.locale)).replaceFirstChar { it.uppercase() }
+    }
 
     fun daysAgo(i: Instant, now: Instant = Instant.now()): Int =
         ChronoUnit.DAYS.between(zdt(i).toLocalDate(), zdt(now).toLocalDate()).toInt()

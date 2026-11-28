@@ -1,0 +1,377 @@
+/* Common */
+"common.back" = "返回";
+"common.cancel" = "取消";
+"common.close" = "关闭";
+"common.delete" = "删除";
+"common.home" = "主页";
+"common.save" = "保存";
+
+/* Auth */
+"login.title" = "欢迎回来。";
+"login.button" = "登录";
+"login.noAccount" = "还没有账号？";
+"login.signUp" = "创建账号";
+"login.localNote" = "你的照片会被妥善保管，大约 30 天后才会回到你身边。";
+"field.email" = "邮箱";
+"field.password" = "密码";
+"field.password.hint" = "至少 8 个字符";
+"field.name" = "昵称";
+"field.name.placeholder" = "例如：小明";
+"field.handle" = "用户名";
+"field.bio" = "简介";
+"field.bio.placeholder" = "你喜欢留意生活中的什么？";
+"signup.header" = "从 SEELI 开始。";
+"signup.title" = "创建账号";
+"signup.subtitle" = "没有点赞，没有粉丝。只有你真正看到的瞬间。";
+"signup.promise" = "我理解照片在拍摄后不会立即显示，且好友仅限我在现实中见过的人。";
+"signup.button" = "创建账号";
+"created.title" = "账号已创建。";
+"created.welcome" = "欢迎，%@。";
+"created.p1" = "更用心地看，而不是保存得更多。";
+"created.p2" = "拍下后便放下。大约 30 天后，你会与它重逢。";
+"created.p3" = "通过二维码与你真正见过的人建立联系。";
+"created.start" = "开始";
+
+/* Home */
+"home.question" = "今天，你看到了什么？";
+"home.sleeping" = "%d 个瞬间正在静静沉睡，等待重逢。";
+"home.reunion.title" = "有一个瞬间回来了";
+"home.reunion.one" = "用今天的目光重新看它。";
+"home.reunion.many" = "%d 个瞬间正在等你。";
+
+/* Camera */
+"camera.title" = "拍照";
+"camera.hint" = "照片在拍摄后不会立即显示。";
+"camera.shutter" = "拍摄";
+"camera.released" = "已放下。";
+"camera.denied" = "SEELI 需要相机权限来记录你所看到的画面。";
+"camera.openSettings" = "打开设置";
+"camera.unavailable" = "此设备没有相机。\n你仍然可以点击拍摄来体验流程。";
+
+/* Post */
+"post.subtitle" = "为这张照片写一句话。";
+"post.hidden.title" = "照片暂时被收起来了。";
+"post.hidden.body" = "随着时间流逝，你会在意想不到的时刻\n再次与它相遇。";
+"post.hidden.auto" = "拍摄时间会自动记录。";
+"post.note.title" = "给这一刻留下一句话。";
+"post.note.subtitle" = "写下你看到的，或你感受到的。";
+"post.note.placeholder" = "你看到了什么？感觉如何？";
+"post.place.title" = "记录地点";
+"post.place.private" = "仅保存在你自己的记忆中。";
+"post.place.locating" = "正在获取位置…";
+"post.place.off" = "不记录地点。";
+"post.next" = "下一步";
+"post.next.hint" = "在下一步中，你可以选择分享对象。";
+
+/* Audience */
+"audience.subtitle" = "选择接收人。";
+"audience.title" = "你想把这幅画面分享给谁？";
+"audience.hint" = "你可以为每条记录选择可见范围。";
+"audience.onlyMe.desc" = "仅自己可见的记忆";
+"audience.circle.desc" = "发送给已建立联系的朋友";
+"audience.public.desc" = "对所有人公开";
+"audience.soon" = "即将推出";
+"audience.lock.title" = "你的照片不会立即显示。";
+"audience.lock.body" = "无论选择谁，你都会在一段时间后再次与它相遇。";
+"audience.submit" = "按此设置发布";
+"audience.cancel" = "取消并返回";
+
+/* Posted */
+"posted.title" = "已放下。";
+"posted.body" = "照片已经被妥善收好。\n大约 30 天后，它会回到你身边。";
+"posted.lookUp" = "现在，放下手机\n看看身边的世界吧。";
+"posted.home" = "回到主页";
+
+/* Connect */
+"connect.subtitle" = "遇见他人眼中的世界。";
+"connect.qr.title" = "通过二维码连接";
+"connect.qr.body" = "与你在现实中见过的人交换二维码。";
+"connect.feed.title" = "他人看到的世界";
+"connect.feed.subtitle" = "从与照片的重逢，到一个新的视角。";
+"connect.place" = "拍摄地点";
+"connect.prompt" = "这个画面让你有什么感受？";
+"connect.send" = "发送你的视角";
+"connect.edit" = "修改你的视角";
+"connect.sent" = "你发送的视角";
+"connect.privacy" = "评论仅对发布者和你可见。";
+"connect.comment.placeholder" = "写下你的感受…";
+"connect.empty" = "你的圈子里还没有人。\n线下见面并交换二维码吧。";
+
+/* Memories */
+"memories.subtitle" = "用文字追溯你曾看过的世界。";
+"memories.count" = "本月记录：%d";
+"memories.empty" = "本月还没有记录。\n今天你看到了什么？";
+"memories.footer" = "不是通过照片，而是通过你留下的文字去回忆。";
+"memories.wordsOfDay" = "那一天的寄语";
+"memories.noWords" = "（没有文字——只有这一刻）";
+"memories.comments" = "查看评论 (%d)";
+"memories.reunited" = "已重逢";
+"memories.sleeping" = "沉睡中";
+"memories.delete.title" = "删除这段记忆？";
+"memories.delete.body" = "照片和文字将被永久删除，无法恢复。";
+"comments.title" = "评论";
+"comments.empty" = "还没有评论。\n当朋友分享他们的视角时，会显示在这里。";
+
+/* Reunion */
+"reunion.subtitle" = "与一个瞬间重逢。";
+"reunion.daysAgo" = "%d 天前，你曾看到过这一幕。";
+"reunion.then" = "当时";
+"reunion.now" = "现在，你看到了什么？";
+"reunion.now.hint" = "同样的照片，但或许你已经不同。";
+"reunion.placeholder" = "你今天的视角…";
+"reunion.save" = "保存新视角";
+"reunion.saved" = "已保存";
+
+/* Profile */
+"profile.subtitle" = "SEELI 与你。";
+"profile.edit" = "编辑资料";
+"profile.section" = "联系与设置";
+"profile.friends" = "好友 · 圈子";
+"profile.friends.sub" = "管理联系人和分享范围";
+"profile.privacy" = "隐私与安全";
+"profile.privacy.sub" = "可见范围 · 黑名单 · 举报";
+"profile.settings" = "设置";
+"profile.settings.sub" = "账号与通知";
+"profile.verified.sub" = "身份认证（即将推出）";
+"profile.footer" = "按照自己的节奏，与世界相连。";
+"friends.subtitle" = "你见过的人。";
+"friends.count" = "你的圈子里有 %d 人";
+
+/* Friend */
+"friend.subtitle" = "已连接的好友";
+"friend.bio" = "简介";
+"friend.bio.empty" = "暂无简介。";
+"friend.memo" = "仅你可见的备注";
+"friend.memo.hint" = "对方看不到这条备注。";
+"friend.memo.placeholder" = "你们是在哪里认识的？";
+"friend.safety" = "关系与安全";
+"friend.report" = "报告问题";
+"friend.report.sub" = "向 SEELI 团队反馈此账号";
+"friend.report.confirm" = "举报此账号？";
+"friend.reported" = "感谢反馈，我们已收到你的举报。";
+"friend.block" = "屏蔽";
+"friend.block.sub" = "停止与此人的所有互动";
+"friend.block.confirm" = "屏蔽此人？对方将从你的圈子中移除。";
+"friend.remove" = "删除好友";
+"friend.remove.sub" = "取消与此人的联系";
+"friend.remove.confirm" = "取消与此人的好友关系？";
+"friend.footer" = "你可以随时查看自己的联系列表。";
+"friend.gone" = "找不到此内容。";
+
+/* Privacy */
+"privacy.default" = "默认发布范围";
+"privacy.p1" = "照片绝不会在拍摄后立即显示——即使是好友也不例外。";
+"privacy.p2" = "地点仅保存在你自己的记忆中。";
+"privacy.p3" = "评论仅对发布者和评论者可见。";
+"privacy.p4" = "没有点赞、粉丝、浏览量或排行榜。";
+"privacy.blocked" = "已屏蔽的人";
+"privacy.blocked.empty" = "你还没有屏蔽任何人。";
+"privacy.unblock" = "取消屏蔽";
+
+/* Settings */
+"settings.language" = "语言";
+"settings.notifications" = "通知";
+"settings.notifications.reunion" = "当瞬间归来时";
+"settings.notifications.hint" = "SEELI 只在旧照片归来时提醒你，没有其他通知。";
+"settings.demo" = "演示模式";
+"settings.demo.toggle" = "照片约 1 分钟后归来";
+"settings.demo.hint" = "无需等待 30 天即可体验重逢。仅对开启后拍摄的照片生效。";
+"settings.account" = "账号";
+"settings.logout" = "退出登录";
+"settings.logout.confirm" = "确定要退出 SEELI 吗？";
+"settings.delete" = "注销账号";
+"settings.delete.confirm" = "永久注销账号？";
+"settings.delete.body" = "所有照片、记忆和联系人都会从 SEELI 中永久删除且无法恢复。如果你使用 Apple 登录，SEELI 对你 Apple ID 的授权也会一并撤销。";
+"verified.title" = "认证账号";
+"verified.body" = "身份认证功能正在准备中，让你在连接时更加安心。";
+
+/* QR */
+"myqr.title" = "我的二维码";
+"myqr.subtitle" = "把它展示给你刚见到的人。";
+"myqr.hint" = "线下见面时，让对方扫描此二维码，或念出下方的 8 位代码。";
+"myqr.scan" = "扫描他人的二维码";
+"scan.hint" = "将好友的二维码放入框内。";
+"scan.unavailable" = "此设备无法使用相机。";
+"scan.manual" = "或输入二维码下方的 8 位代码";
+"scan.add" = "添加";
+"scan.invalid" = "代码无效，代码由 8 位字符组成。";
+"addFriend.question" = "你们在现实中见过面吗？\n发送好友请求——对方同意后，你们就会进入彼此的圈子。";
+"addFriend.connect" = "连接";
+"addFriend.done" = "已连接！现在你们在彼此的圈子里了。";
+"addFriend.already" = "你们已经是好友了。";
+"addFriend.self" = "这是你自己的代码。";
+
+/* Notifications */
+"notification.reunion" = "你曾看过的一个瞬间回来了。";
+"myqr.rotate" = "生成新代码（旧代码将失效）";
+"addFriend.notFound" = "未找到使用此代码的用户。";
+"memories.uploading" = "等待上传";
+"settings.server" = "服务器";
+"settings.server.hint" = "SEELI API 地址。留空则使用默认地址。按回车保存。";
+"error.generic" = "出了点问题，请重试。";
+"error.network" = "无法连接服务器，请检查网络后重试。";
+"error.invalid_credentials" = "邮箱或密码错误。";
+"error.handle_taken" = "该用户名已被占用。";
+"error.email_taken" = "该邮箱已被注册。";
+"error.invalid_handle" = "用户名只能包含小写字母、数字、. _ -（2–30 个字符）。";
+"error.invalid_email" = "邮箱格式无效。";
+"error.weak_password" = "密码至少需要 8 个字符。";
+"error.name_required" = "请输入昵称。";
+"error.not_found" = "找不到此内容。";
+"error.too_many_requests" = "尝试次数过多，请稍等一分钟。";
+"error.unauthorized" = "登录状态已过期，请重新登录。";
+"error.not_yet" = "这张照片还没到归来的时候。";
+"error.photo_too_large" = "照片过大。";
+"error.account_suspended" = "此账号已被停用。如有疑问，请联系 SEELI。";
+"auth.or" = "或";
+"auth.apple" = "通过 Apple 继续";
+"auth.google" = "通过 Google 继续";
+"created.handle" = "你的用户名是 @%@ —— 可以在个人资料中修改。";
+"error.provider_disabled" = "此登录方式尚未启用。";
+"error.invalid_token" = "无法验证账号，请重试。";
+"error.provider_unreachable" = "无法连接 Apple/Google，请稍后再试。";
+
+/* One-time view of a friend's photo */
+"connect.once.tap" = "点击查看";
+"connect.once.hint" = "仅可打开一次";
+"connect.once.seen" = "你已看过这个瞬间";
+"connect.once.seen.at" = "已查看 · %@";
+"connect.once.viewer" = "仅此一次。关闭后将无法再次打开。";
+"connect.once.close" = "收起照片";
+"connect.once.confirm.title" = "仅限查看一次";
+"connect.once.confirm.body" = "关闭后你将无法再次打开这张照片，请仔细看一看。";
+"connect.once.confirm.ok" = "立即查看";
+"common.cancel.later" = "稍后";
+"error.already_viewed" = "你已经看过这张照片了。每个瞬间只能看一次。";
+"connect.once.now" = "仅此一次";
+"settings.notifications.friends" = "当好友分享瞬间时";
+"settings.notifications.friends.hint" = "当圈子里的好友发布照片时收到通知。好友的照片只能看一次。";
+
+"comments.reply" = "回复";
+"comments.reply.placeholder" = "写下回复…";
+"comments.reply.send" = "发送";
+"comments.reply.yours" = "你已回复";
+"comments.reply.edit" = "编辑";
+"connect.reply.from" = "%@ 回复了";
+"connect.once.protected" = "照片受保护，禁止截屏与录屏";
+"notification.comment" = "%@ 对你的瞬间分享了视角。";
+"notification.reply" = "%@ 回复了你的视角。";
+"notification.friend" = "%@ 成为了你的好友。";
+
+/* ---- Widgets ---- */
+"home.question" = "今天，你看到了什么？";
+"widget.inline" = "今天你看到了什么？";
+"widget.reunion.title" = "有一个瞬间回来了";
+"widget.reunion.tap" = "点击重逢";
+"widget.reunion.count" = "%d 个瞬间正在等你";
+"widget.sleeping" = "%d 个瞬间沉睡中";
+"widget.sleeping.hint" = "它们会在你意想不到时回来。";
+"widget.calm" = "此刻没有待看的瞬间，看看周围吧。";
+"widget.wordsOfDay" = "那一天的寄语";
+"widget.words.empty" = "你拍照时留下的文字会显示在这里。";
+"widget.signedOut" = "打开 SEELI 开始使用。";
+"widget.today.name" = "今日";
+"widget.today.desc" = "拍下你所看到的，并在某个瞬间归来时收到提醒。";
+"widget.words.name" = "那一天的寄语";
+"widget.words.desc" = "你曾留下的只言片语——不是照片，而是文字。";
+"widget.lock.desc" = "提醒你观察世界，并在瞬间归来时通知你。";
+
+/* 2026-11 social update */
+"common.done" = "完成";
+"audience.close.desc" = "仅限你标记的密友";
+"audience.selected.desc" = "逐个选择接收这一刻的人";
+"audience.close.pick" = "选择密友";
+"audience.close.manage" = "编辑密友列表";
+"audience.close.none" = "还没有密友";
+"audience.close.count" = "%d 位密友";
+"audience.selected.count" = "已选 %d 人";
+"picker.search" = "搜索好友";
+"picker.clear" = "清除";
+"close.title" = "密友";
+"close.hint" = "设为“密友”的记录仅对标星好友可见，他们不会知道自己被标记了。";
+"close.add" = "设为密友";
+"close.remove" = "取消密友";
+"close.toggle" = "密友";
+"close.toggle.hint" = "可看到你分享给密友的瞬间。";
+"friends.close.hint" = "点击星标即可标记为密友。";
+"requests.title" = "好友请求";
+"requests.subtitle" = "查看想与你建立联系的人。";
+"requests.banner.title" = "有人想加你为好友";
+"requests.incoming" = "收到的请求";
+"requests.incoming.empty" = "暂无待处理的请求。";
+"requests.accept" = "同意";
+"requests.decline" = "拒绝";
+"requests.sent" = "已发送";
+"requests.waiting" = "等待对方同意";
+"requests.cancel" = "取消请求";
+"requests.incoming.count" = "%d 条待处理请求";
+"requests.sent.count" = "%d 条已发送请求";
+"addFriend.request" = "发送好友请求";
+"addFriend.requested" = "请求已发送。%@ 同意后，你们就会进入彼此的圈子。";
+"addFriend.requestedMe" = "%@ 向你发送了好友请求。";
+"connect.section.new" = "新动态";
+"connect.section.new.empty" = "你已经看完了所有新瞬间。";
+"connect.section.active" = "对话中";
+"connect.older.show" = "查看更早 (%d)";
+"connect.older.hide" = "收起更早";
+"connect.activity" = "动态";
+"connect.activity.all" = "查看全部";
+"connect.activity.less" = "收起";
+"connect.comments.open" = "评论 (%d)";
+"activity.comment" = "%@ 评论了你的瞬间";
+"activity.comment.pending" = "%@ 希望圈子看到这条评论——等待你审核";
+"activity.reply" = "%@ 回复了你的评论";
+"activity.request" = "%@ 想加你为好友";
+"activity.friend" = "%@ 成为了你的好友";
+"home.connect.badge" = "%d 条新动态";
+"memories.pending" = "%d 条待审核";
+"thread.empty" = "还没有评论，成为第一个分享感受的人吧。";
+"thread.owner.hint" = "“圈子可见”的评论需要你审核后才会对大家显示。";
+"thread.friend.hint" = "默认只有 %1$@ 能看到你的评论。需要 %1$@ 审核后才能让圈子看到。";
+"thread.you" = "你";
+"thread.edited" = "已编辑";
+"thread.approve" = "向圈子展示";
+"thread.keepPrivate" = "仅自己可见";
+"thread.pending" = "待审核";
+"thread.private" = "仅 %@ 可见";
+"thread.private.owner" = "私密";
+"thread.private.reply" = "私密回复";
+"thread.public" = "圈子";
+"thread.editing" = "正在编辑评论";
+"thread.replyingTo" = "回复 %@";
+"thread.only" = "仅 %@";
+"thread.circle" = "圈子";
+"thread.circle.hint" = "%@ 审核后所有人都会看到。";
+"thread.delete.confirm" = "删除这条评论及其回复？";
+"signup.terms" = "注册即表示你同意 SEELI 的[使用条款](https://seeli.cam/terms)和[隐私政策](https://seeli.cam/privacy)。";
+"signup.check.name" = "请输入昵称。";
+"signup.check.handle" = "用户名需为 2–30 个字符：小写字母、数字、点、下划线或连字符。";
+"signup.check.email" = "请输入有效的邮箱地址。";
+"signup.check.password" = "密码至少需要 8 个字符。";
+"settings.legal" = "法律条款";
+"settings.terms" = "使用条款";
+"settings.privacyPolicy" = "隐私政策";
+"whatsnew.title" = "有什么新变化？";
+"whatsnew.subtitle" = "SEELI 1.3 —— 来自你们的反馈与建议。";
+"whatsnew.comments.title" = "像对话一样的评论";
+"whatsnew.comments.body" = "可以多次评论并互相回复。默认仅照片主人可见；经主人审核后可向圈子展示。";
+"whatsnew.audience.title" = "密友与指定接收人";
+"whatsnew.audience.body" = "标星密友即可发布密友专属瞬间，也可以为每个瞬间单独勾选接收人。";
+"whatsnew.requests.title" = "好友请求";
+"whatsnew.requests.body" = "扫描二维码现在会发送好友请求——对方同意后才会成为好友。";
+"whatsnew.connect.title" = "更清爽的 Let's connect";
+"whatsnew.connect.body" = "新动态与近期互动置顶，旧内容自动收起。主页的红点会提示有新内容。";
+"whatsnew.once.title" = "真正看过才算“已看”";
+"whatsnew.once.body" = "好友照片仍会出现在 Let's connect 中，但只有真正停留在屏幕上时才计为已看——快速滑过不算。";
+"whatsnew.dark.title" = "深色模式";
+"whatsnew.dark.body" = "SEELI 会跟随设备的浅色或深色外观，也可以在设置中切换。";
+"whatsnew.gestures.title" = "左滑返回，下拉刷新";
+"whatsnew.gestures.body" = "从屏幕左边缘滑动即可返回；在 My Memories 中下拉即可刷新。";
+"whatsnew.done" = "开始吧";
+"settings.appearance" = "外观";
+"settings.appearance.system" = "跟随系统";
+"settings.appearance.light" = "浅色";
+"settings.appearance.dark" = "深色";
+"settings.appearance.dynamic" = "Material You 配色";
+"settings.appearance.dynamic.hint" = "根据你的壁纸自动匹配强调色。";
+"error.google_unavailable" = "无法在此设备上使用 Google 登录。请检查是否已添加 Google 账号、稍后再试，或使用邮箱登录。";

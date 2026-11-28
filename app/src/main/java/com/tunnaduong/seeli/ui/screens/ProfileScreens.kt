@@ -316,7 +316,7 @@ fun PrivacyScreen() {
             Row(Modifier.fillMaxWidth().clip(RoundedCornerShape(10.dp)).background(Seeli.Card).padding(2.dp)) {
                 listOf(Audience.ONLY_ME to "ONLY ME", Audience.CLOSE_FRIENDS to "CLOSE", Audience.CIRCLE to "MY CIRCLE").forEach { (a, label) ->
                     val on = AppStore.defaultAudience == a
-                    Box(Modifier.weight(1f).clip(RoundedCornerShape(8.dp)).background(if (on) Color.White else Color.Transparent)
+                    Box(Modifier.weight(1f).clip(RoundedCornerShape(8.dp)).background(if (on) Seeli.Surface else Color.Transparent)
                         .tap { AppStore.defaultAudience = a; AppStore.save() }.padding(vertical = 8.dp), contentAlignment = Alignment.Center) {
                         Text(label, style = ts(13, if (on) FontWeight.SemiBold else FontWeight.Normal, Seeli.Ink))
                     }
@@ -401,10 +401,16 @@ fun SettingsScreen() {
                             }
                         }
                 }
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.S) {
+                    ToggleRow(t("settings.appearance.dynamic"), AppStore.dynamicColor, Modifier.padding(top = 6.dp)) {
+                        AppStore.chooseDynamicColor(it)
+                    }
+                    Text(t("settings.appearance.dynamic.hint"), style = ts(11, color = Seeli.Muted))
+                }
             }
             Group(t("settings.legal")) {
                 val ctx = androidx.compose.ui.platform.LocalContext.current
-                val q = if (L10n.language == AppLanguage.JA) "?lang=ja" else ""
+                val q = if (L10n.language == AppLanguage.VI) "" else "?lang=${L10n.language.code}"
                 listOf(t("settings.terms") to "https://seeli.cam/terms$q", t("settings.privacyPolicy") to "https://seeli.cam/privacy$q").forEach { (label, url) ->
                     Row(Modifier.fillMaxWidth().tap {
                         ctx.startActivity(android.content.Intent(android.content.Intent.ACTION_VIEW, android.net.Uri.parse(url)))
@@ -498,7 +504,7 @@ fun FriendRequestsScreen() {
                     }
                     if (busy == r.user.id) CircularProgressIndicator(color = Seeli.Green, strokeWidth = 2.dp, modifier = Modifier.size(22.dp))
                     else {
-                        Text(t("requests.accept"), style = ts(13, FontWeight.SemiBold, Color.White),
+                        Text(t("requests.accept"), style = ts(13, FontWeight.SemiBold, Seeli.OnGreen),
                             modifier = Modifier.clip(CircleShape).background(Seeli.Green).tap {
                                 busy = r.user.id
                                 scope.launch { AppStore.acceptRequest(r.user.id); busy = null }

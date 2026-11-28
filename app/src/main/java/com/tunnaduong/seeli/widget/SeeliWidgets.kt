@@ -3,20 +3,22 @@ package com.tunnaduong.seeli.widget
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
+import android.os.Build
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.DpSize
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.glance.ColorFilter
 import androidx.glance.GlanceId
 import androidx.glance.GlanceModifier
 import androidx.glance.GlanceTheme
 import androidx.glance.Image
 import androidx.glance.ImageProvider
+import androidx.glance.LocalContext
 import androidx.glance.LocalSize
 import androidx.glance.action.clickable
 import androidx.glance.appwidget.GlanceAppWidget
-import androidx.glance.appwidget.GlanceAppWidgetManager
 import androidx.glance.appwidget.GlanceAppWidgetReceiver
 import androidx.glance.appwidget.SizeMode
 import androidx.glance.appwidget.action.actionStartActivity
@@ -33,7 +35,6 @@ import androidx.glance.layout.Spacer
 import androidx.glance.layout.fillMaxHeight
 import androidx.glance.layout.fillMaxSize
 import androidx.glance.layout.fillMaxWidth
-import androidx.glance.layout.height
 import androidx.glance.layout.padding
 import androidx.glance.layout.size
 import androidx.glance.layout.width
@@ -42,6 +43,7 @@ import androidx.glance.text.FontStyle
 import androidx.glance.text.FontWeight
 import androidx.glance.text.Text
 import androidx.glance.text.TextStyle
+import androidx.glance.unit.ColorProvider
 import com.tunnaduong.seeli.MainActivity
 import com.tunnaduong.seeli.R
 import com.tunnaduong.seeli.core.DateText
@@ -52,13 +54,40 @@ import com.tunnaduong.seeli.core.t
 import com.tunnaduong.seeli.core.tf
 import java.time.Instant
 
-private val BG = Color(0xFFF6F5F0)
-private val CARD = Color(0xFFECEBE4)
-private val GREEN = Color(0xFF5F6B4E)
-private val INK = Color(0xFF2F302B)
-private val MUTED = Color(0xFF8B8C84)
+private val BG = ColorProvider(Color(0xFFF6F5F0), Color(0xFF161713))
+private val CARD = ColorProvider(Color(0xFFECEBE4), Color(0xFF2A2C25))
+private val GREEN = ColorProvider(Color(0xFF5F6B4E), Color(0xFF7D8D65))
+private val ON_GREEN = ColorProvider(Color.White, Color.White)
+private val INK = ColorProvider(Color(0xFF2F302B), Color(0xFFECEAE2))
+private val MUTED = ColorProvider(Color(0xFF8B8C84), Color(0xFF9C9D94))
 
-private fun c(color: Color) = ColorProvider(color, color)
+private fun useDynamicColors(context: Context): Boolean =
+    Build.VERSION.SDK_INT >= Build.VERSION_CODES.S &&
+        context.getSharedPreferences("seeli.prefs", Context.MODE_PRIVATE).getBoolean("seeli.dynamicColor", true)
+
+@Composable
+private fun widgetBg(): ColorProvider =
+    if (useDynamicColors(LocalContext.current)) GlanceTheme.colors.surface else BG
+
+@Composable
+private fun widgetCard(): ColorProvider =
+    if (useDynamicColors(LocalContext.current)) GlanceTheme.colors.surfaceVariant else CARD
+
+@Composable
+private fun widgetPrimary(): ColorProvider =
+    if (useDynamicColors(LocalContext.current)) GlanceTheme.colors.primary else GREEN
+
+@Composable
+private fun widgetOnPrimary(): ColorProvider =
+    if (useDynamicColors(LocalContext.current)) GlanceTheme.colors.onPrimary else ON_GREEN
+
+@Composable
+private fun widgetInk(): ColorProvider =
+    if (useDynamicColors(LocalContext.current)) GlanceTheme.colors.onSurface else INK
+
+@Composable
+private fun widgetMuted(): ColorProvider =
+    if (useDynamicColors(LocalContext.current)) GlanceTheme.colors.onSurfaceVariant else MUTED
 
 private fun open(context: Context, link: String) =
     actionStartActivity(Intent(Intent.ACTION_VIEW, Uri.parse(link), context, MainActivity::class.java)
@@ -75,18 +104,18 @@ object SeeliWidgets {
 
 @Composable
 private fun SignedOut(context: Context) {
-    Column(GlanceModifier.fillMaxSize().background(c(BG)).padding(12.dp).clickable(open(context, "seeli://home")),
+    Column(GlanceModifier.fillMaxSize().background(widgetBg()).padding(12.dp).clickable(open(context, "seeli://home")),
         verticalAlignment = Alignment.CenterVertically, horizontalAlignment = Alignment.CenterHorizontally) {
-        Image(ImageProvider(R.drawable.ic_eye), null, GlanceModifier.size(24.dp))
-        Text("SEELI", style = TextStyle(c(INK), 16.sp, FontWeight.Bold))
-        Text(t("widget.signedOut"), style = TextStyle(c(MUTED), 11.sp))
+        Image(ImageProvider(R.drawable.ic_eye), null, GlanceModifier.size(24.dp), colorFilter = ColorFilter.tint(widgetInk()))
+        Text("SEELI", style = TextStyle(widgetInk(), 16.sp, FontWeight.Bold))
+        Text(t("widget.signedOut"), style = TextStyle(widgetMuted(), 11.sp))
     }
 }
 
 @Composable
 private fun CameraButton(size: Int = 38) {
-    Box(GlanceModifier.size(size.dp).cornerRadius((size / 2).dp).background(c(GREEN)), contentAlignment = Alignment.Center) {
-        Image(ImageProvider(R.drawable.ic_camera_white), null, GlanceModifier.size((size * 0.45).dp))
+    Box(GlanceModifier.size(size.dp).cornerRadius((size / 2).dp).background(widgetPrimary()), contentAlignment = Alignment.Center) {
+        Image(ImageProvider(R.drawable.ic_camera_white), null, GlanceModifier.size((size * 0.45).dp), colorFilter = ColorFilter.tint(widgetOnPrimary()))
     }
 }
 
@@ -108,54 +137,58 @@ class TodayWidget : GlanceAppWidget() {
         val due = snap.dueCount(now)
         val sleeping = snap.sleepingCount(now)
         val wide = LocalSize.current.width >= 280.dp
+        val bg = widgetBg()
+        val card = widgetCard()
+        val ink = widgetInk()
+        val muted = widgetMuted()
         if (!wide) {
-            Column(GlanceModifier.fillMaxSize().background(c(BG)).padding(14.dp)
+            Column(GlanceModifier.fillMaxSize().background(bg).padding(14.dp)
                 .clickable(open(context, if (due > 0) "seeli://reunion" else "seeli://camera"))) {
-                Text(DateText.header(now), style = TextStyle(c(MUTED), 10.sp), maxLines = 1)
+                Text(DateText.header(now), style = TextStyle(muted, 10.sp), maxLines = 1)
                 Spacer(GlanceModifier.defaultWeight())
                 if (due > 0) {
-                    Image(ImageProvider(R.drawable.ic_sparkles), null, GlanceModifier.size(18.dp))
-                    Text(t("widget.reunion.title"), style = TextStyle(c(INK), 14.sp, FontWeight.Medium))
+                    Image(ImageProvider(R.drawable.ic_sparkles), null, GlanceModifier.size(18.dp), colorFilter = ColorFilter.tint(ink))
+                    Text(t("widget.reunion.title"), style = TextStyle(ink, 14.sp, FontWeight.Medium))
                 } else {
-                    Text(t("home.question"), style = TextStyle(c(INK), 15.sp, fontFamily = FontFamily.Serif))
+                    Text(t("home.question"), style = TextStyle(ink, 15.sp, fontFamily = FontFamily.Serif))
                 }
                 Spacer(GlanceModifier.defaultWeight())
                 Row(GlanceModifier.fillMaxWidth(), verticalAlignment = Alignment.Bottom) {
-                    if (due > 0) Text(t("widget.reunion.tap"), style = TextStyle(c(MUTED), 10.sp)) else CameraButton()
+                    if (due > 0) Text(t("widget.reunion.tap"), style = TextStyle(muted, 10.sp)) else CameraButton()
                     Spacer(GlanceModifier.defaultWeight())
-                    if (sleeping > 0) Text("☾ $sleeping", style = TextStyle(c(MUTED), 11.sp))
+                    if (sleeping > 0) Text("☾ $sleeping", style = TextStyle(muted, 11.sp))
                 }
             }
         } else {
-            Row(GlanceModifier.fillMaxSize().background(c(BG)).padding(14.dp)) {
+            Row(GlanceModifier.fillMaxSize().background(bg).padding(14.dp)) {
                 Column(GlanceModifier.defaultWeight().fillMaxHeight().clickable(open(context, "seeli://camera"))) {
                     Row(verticalAlignment = Alignment.CenterVertically) {
-                        Image(ImageProvider(R.drawable.ic_eye), null, GlanceModifier.size(12.dp))
-                        Text(" SEELI", style = TextStyle(c(INK), 12.sp, FontWeight.Bold))
+                        Image(ImageProvider(R.drawable.ic_eye), null, GlanceModifier.size(12.dp), colorFilter = ColorFilter.tint(ink))
+                        Text(" SEELI", style = TextStyle(ink, 12.sp, FontWeight.Bold))
                     }
-                    Text(DateText.header(now), style = TextStyle(c(MUTED), 10.sp), maxLines = 1)
+                    Text(DateText.header(now), style = TextStyle(muted, 10.sp), maxLines = 1)
                     Spacer(GlanceModifier.defaultWeight())
-                    Text(t("home.question"), style = TextStyle(c(INK), 15.sp, fontFamily = FontFamily.Serif))
+                    Text(t("home.question"), style = TextStyle(ink, 15.sp, fontFamily = FontFamily.Serif))
                     Spacer(GlanceModifier.defaultWeight())
                     CameraButton()
                 }
                 Spacer(GlanceModifier.width(14.dp))
-                Column(GlanceModifier.defaultWeight().fillMaxHeight().cornerRadius(16.dp).background(c(CARD)).padding(12.dp)
+                Column(GlanceModifier.defaultWeight().fillMaxHeight().cornerRadius(16.dp).background(card).padding(12.dp)
                     .clickable(open(context, if (due > 0) "seeli://reunion" else "seeli://memories"))) {
                     when {
                         due > 0 -> {
-                            Image(ImageProvider(R.drawable.ic_sparkles), null, GlanceModifier.size(18.dp))
-                            Text(t("widget.reunion.title"), style = TextStyle(c(INK), 13.sp, FontWeight.Medium))
-                            Text(if (due > 1) tf("widget.reunion.count", due) else t("widget.reunion.tap"), style = TextStyle(c(MUTED), 11.sp))
+                            Image(ImageProvider(R.drawable.ic_sparkles), null, GlanceModifier.size(18.dp), colorFilter = ColorFilter.tint(ink))
+                            Text(t("widget.reunion.title"), style = TextStyle(ink, 13.sp, FontWeight.Medium))
+                            Text(if (due > 1) tf("widget.reunion.count", due) else t("widget.reunion.tap"), style = TextStyle(muted, 11.sp))
                         }
                         sleeping > 0 -> {
-                            Image(ImageProvider(R.drawable.ic_moon), null, GlanceModifier.size(18.dp))
-                            Text(tf("widget.sleeping", sleeping), style = TextStyle(c(INK), 12.sp))
-                            Text(t("widget.sleeping.hint"), style = TextStyle(c(MUTED), 10.sp))
+                            Image(ImageProvider(R.drawable.ic_moon), null, GlanceModifier.size(18.dp), colorFilter = ColorFilter.tint(ink))
+                            Text(tf("widget.sleeping", sleeping), style = TextStyle(ink, 12.sp))
+                            Text(t("widget.sleeping.hint"), style = TextStyle(muted, 10.sp))
                         }
                         else -> {
-                            Image(ImageProvider(R.drawable.ic_leaf), null, GlanceModifier.size(18.dp))
-                            Text(t("widget.calm"), style = TextStyle(c(INK), 12.sp))
+                            Image(ImageProvider(R.drawable.ic_leaf), null, GlanceModifier.size(18.dp), colorFilter = ColorFilter.tint(ink))
+                            Text(t("widget.calm"), style = TextStyle(ink, 12.sp))
                         }
                     }
                 }
@@ -186,20 +219,23 @@ class WordsWidget : GlanceAppWidget() {
         val slot = (System.currentTimeMillis() / 10_800_000L).toInt()
         val word = snap.words.getOrNull(if (snap.words.isEmpty()) 0 else slot % snap.words.size)
         val small = LocalSize.current.width < 280.dp
-        Column(GlanceModifier.fillMaxSize().background(c(BG)).padding(14.dp)
+        val bg = widgetBg()
+        val ink = widgetInk()
+        val muted = widgetMuted()
+        Column(GlanceModifier.fillMaxSize().background(bg).padding(14.dp)
             .clickable(open(context, if (word == null) "seeli://camera" else "seeli://memories"))) {
-            Text(t("widget.wordsOfDay"), style = TextStyle(c(MUTED), 10.sp))
+            Text(t("widget.wordsOfDay"), style = TextStyle(muted, 10.sp))
             Spacer(GlanceModifier.defaultWeight())
             if (word == null) {
-                Text(t("widget.words.empty"), style = TextStyle(c(INK), 13.sp, fontFamily = FontFamily.Serif))
+                Text(t("widget.words.empty"), style = TextStyle(ink, 13.sp, fontFamily = FontFamily.Serif))
             } else {
                 // Glance has no vertical writing; Japanese notes keep the Mincho serif look horizontally.
-                Text(word.note, maxLines = if (small) 5 else 4, style = TextStyle(c(INK), (if (small) 14 else 16).sp,
+                Text(word.note, maxLines = if (small) 5 else 4, style = TextStyle(ink, (if (small) 14 else 16).sp,
                     fontStyle = if (word.note.isMostlyCJK) FontStyle.Normal else FontStyle.Italic, fontFamily = FontFamily.Serif))
             }
             Spacer(GlanceModifier.defaultWeight())
             word?.let {
-                Text(listOfNotNull(DateText.long(it.date), it.place).joinToString(" · "), maxLines = 2, style = TextStyle(c(MUTED), 9.sp))
+                Text(listOfNotNull(DateText.long(it.date), it.place).joinToString(" · "), maxLines = 2, style = TextStyle(muted, 9.sp))
             }
         }
     }

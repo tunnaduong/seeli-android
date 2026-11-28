@@ -136,7 +136,7 @@ private fun LoginScreen(onSignUp: () -> Unit) {
                 try { AppStore.login(email.trim(), password) } catch (e: Exception) { error = e.userMessage() }
                 busy = false
             }
-        }) { if (busy) CircularProgressIndicator(color = Color.White, strokeWidth = 2.dp, modifier = Modifier.size(22.dp)) else Text(t("login.button")) }
+        }) { if (busy) CircularProgressIndicator(color = Seeli.OnGreen, strokeWidth = 2.dp, modifier = Modifier.size(22.dp)) else Text(t("login.button")) }
 
         SocialButtons(onError = { error = it }, modifier = Modifier.padding(top = 16.dp))
 
@@ -251,7 +251,7 @@ private fun SignUpScreen(onBack: () -> Unit) {
                     } catch (e: Exception) { error = e.userMessage() }
                     busy = false
                 }
-            }) { if (busy) CircularProgressIndicator(color = Color.White, strokeWidth = 2.dp, modifier = Modifier.size(22.dp)) else Text(t("signup.button")) }
+            }) { if (busy) CircularProgressIndicator(color = Seeli.OnGreen, strokeWidth = 2.dp, modifier = Modifier.size(22.dp)) else Text(t("signup.button")) }
             SocialButtons(onError = { error = it }, modifier = Modifier.padding(top = 16.dp))
             Gap(24.dp)
         }
